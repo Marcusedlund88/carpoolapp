@@ -9,5 +9,6 @@ import java.util.List;
 
 @Repository
 public interface CurrentLocationRepository extends JpaRepository<Location, Long> {
-    //List<Location> getLocationByUserId(long id);
+    Location getLocationById(long id);
+    List<Location> getLocationByAppUser_Id(long id);
 }

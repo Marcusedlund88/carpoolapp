@@ -4,6 +4,7 @@ import com.example.carpoolapp.DATA.AppUser;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import static org.junit.jupiter.api.Assertions.*;
 
 import java.util.List;
 
@@ -16,8 +17,7 @@ class AppUserRepositoryTest {
     @Test
     public void findAllUsers(){
         List<AppUser> appUsers = userRepository.findAll();
-        System.out.println(appUsers);
-        System.out.println("wait");
+        assertEquals(appUsers.size(), 5);
     }
 
 }

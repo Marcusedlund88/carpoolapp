@@ -20,14 +20,33 @@ public class cmdLineRunner {
 
             userRepository.save(new AppUser("dummyOne"));
             userRepository.save(new AppUser("dummyTwo"));
+            userRepository.save(new AppUser("dummyThree"));
+            userRepository.save(new AppUser("dummyFour"));
+            userRepository.save(new AppUser("dummyFive"));
 
             currentLocationRepository.save(new Location(userRepository.findByName("dummyOne")
                     , "dummyLongOne"
-                    , "dummyLongTwo"));
+                    , "dummyLatOne"));
 
             currentLocationRepository.save(new Location(userRepository.findByName("dummyTwo")
-                    , "dummyLongOne"
-                    , "dummyLongTwo"));
+                    , "dummyLongTwo"
+                    , "dummyLatTwo"));
+
+            currentLocationRepository.save(new Location(userRepository.findByName("dummyThree")
+                    , "dummyLongThree"
+                    , "dummyLatThree"));
+
+            currentLocationRepository.save(new Location(userRepository.findByName("dummyFour")
+                    , "dummyLongFour"
+                    , "dummyLatFour"));
+
+            currentLocationRepository.save(new Location(userRepository.findByName("dummyFive")
+                    , "dummyLongFive"
+                    , "dummyLatFive"));
+
+            previousLocationRepository.save(currentLocationRepository.getLocationById(1));
+
+            previousLocationRepository.save(currentLocationRepository.getLocationById(2));
         };
     }
 
