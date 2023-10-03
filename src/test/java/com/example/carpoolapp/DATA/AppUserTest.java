@@ -8,7 +8,6 @@ import org.springframework.test.context.ContextConfiguration;
 import static org.junit.jupiter.api.Assertions.*;
 
 @SpringBootTest
-@ContextConfiguration(classes = AppUser.class)
 class AppUserTest {
 
     private AppUser appUser;
