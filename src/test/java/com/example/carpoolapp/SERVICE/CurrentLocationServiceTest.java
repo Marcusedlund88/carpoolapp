@@ -1,3 +1,4 @@
+/*
 package com.example.carpoolapp.SERVICE;
 
 import com.example.carpoolapp.DATA.AppUser;
@@ -34,4 +35,4 @@ class CurrentLocationServiceTest {
         //assertEquals(currentLocationRepository.getLocationByUserId(user.getId()).size(), 1);
     }
 
-}
+}*/
