@@ -20,11 +20,6 @@ public class SecurityConfiguration {
                             .anyRequest()
                             .permitAll();
                 })
-                .headers(headers->{
-                    headers.frameOptions(frame->{
-                        frame.disable();
-                    });
-                })
                 .build();
     }
 
